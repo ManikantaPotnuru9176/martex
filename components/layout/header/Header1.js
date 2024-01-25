@@ -17,7 +17,7 @@ export default function Header1({
           {/* MOBILE HEADER */}
           <div className="wsmobileheader clearfix">
             <span className="smllogo">
-              <img src="/images/logo-pink.png" alt="mobile-logo" />
+              <img src="/images/contentql/logo-black.png" alt="mobile-logo" />
             </span>
             <a
               id="wsnavtoggle"
@@ -35,12 +35,12 @@ export default function Header1({
                 <Link href="#hero-1" className="logo-black">
                   <img
                     className="light-theme-img"
-                    src="/images/contentql/ContentQL-Header-Logo-3.png"
+                    src="/images/contentql/logo-black.png"
                     alt="logo"
                   />
                   <img
                     className="dark-theme-img"
-                    src="/images/logo-pink-white.png"
+                    src="/images/contentql/logo-white.png"
                     alt="logo"
                   />
                 </Link>
@@ -48,7 +48,7 @@ export default function Header1({
               {/* HEADER WHITE LOGO */}
               <div className="desktoplogo">
                 <Link href="#hero-1" className="logo-white">
-                  <img src="/images/logo-white.png" alt="logo" />
+                  <img src="/images/contentql/logo-white.png" alt="logo" />
                 </Link>
               </div>
               {/* MAIN MENU */}

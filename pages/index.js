@@ -26,11 +26,10 @@ export default function Home() {
     <>
       <Layout
         headerStyle={1}
-        footerStyle={1}
+        footerStyle={3}
         headerCls="navbar-dark light-hero-header"
       >
         <Hero10 />
-        <Features2_15 />
         <Features11_12 />
         <Lnk1_26 />
         <Ct01_34 />
