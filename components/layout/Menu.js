@@ -1,82 +1,769 @@
-import Link from "next/link"
-import { useRouter } from "next/router"
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Menu() {
-    const router = useRouter()
+  const router = useRouter();
 
-    return (
-        <>
-
-            <ul className="wsmenu-list nav-theme">
-                {/* DROPDOWN SUB MENU */}
-                <li aria-haspopup="true">
-                    <Link href="#" className="h-link">About <span className="wsarrow" /></Link>
-                    <ul className="sub-menu">
-                        <li aria-haspopup="true"><Link href="#lnk-1">Why Martex?</Link></li>
-                        <li aria-haspopup="true"><Link href="#lnk-2">Integrations</Link></li>
-                        <li aria-haspopup="true"><Link href="#lnk-3">How It Works</Link></li>
-                        <li aria-haspopup="true"><Link href="#features-2">Best Solutions</Link></li>
-                        <li aria-haspopup="true"><Link href="#reviews-1">Testimonials</Link></li>
-                    </ul>
-                </li>
-                {/* SIMPLE NAVIGATION LINK */}
-                <li className="nl-simple" aria-haspopup="true"><Link href="#features-6" className="h-link">Features</Link></li>
-                {/* MEGAMENU */}
-                <li aria-haspopup="true" className="mg_link"><Link href="#" className="h-link">Pages <span className="wsarrow" /></Link>
-                    <div className="wsmegamenu w-75 clearfix">
-                        <div className="container">
-                            <div className="row">
-                                {/* MEGAMENU LINKS */}
-                                <ul className="col-md-12 col-lg-3 link-list">
-                                    <li className="fst-li"><Link href="/about">About Us</Link></li>
-                                    <li><Link href="/team">Our Team</Link></li>
-                                    <li><Link href="/careers">Careers <span className="sm-info">4</span></Link></li>
-                                    <li><Link href="/career-role">Career Details</Link></li>
-                                    <li><Link href="/contacts">Contact Us</Link></li>
-                                </ul>
-                                {/* MEGAMENU LINKS */}
-                                <ul className="col-md-12 col-lg-3 link-list">
-                                    <li><Link href="/features">Core Features</Link></li>
-                                    <li className="fst-li"><Link href="/projects">Our Projects</Link></li>
-                                    <li><Link href="/project-details">Project Details</Link></li>
-                                    <li><Link href="/reviews">Testimonials</Link></li>
-                                    <li><Link href="/download">Download Page</Link></li>
-                                </ul>
-                                {/* MEGAMENU LINKS */}
-                                <ul className="col-md-12 col-lg-3 link-list">
-                                    <li className="fst-li"><Link href="/pricing-1">Pricing Page #1</Link></li>
-                                    <li><Link href="/pricing-2">Pricing Page #2</Link></li>
-                                    <li><Link href="/faqs">FAQs Page</Link></li>
-                                    <li><Link href="/help-center">Help Center</Link></li>
-                                    <li><Link href="/404">404 Page</Link></li>
-                                </ul>
-                                {/* MEGAMENU LINKS */}
-                                <ul className="col-md-12 col-lg-3 link-list">
-                                    <li className="fst-li"><Link href="/blog-listing">Blog Listing</Link></li>
-                                    <li><Link href="/single-post">Single Blog Post</Link></li>
-                                    <li><Link href="/login-2">Login Page</Link></li>
-                                    <li><Link href="/signup-2">Signup Page</Link></li>
-                                    <li><Link href="/reset-password">Reset Password</Link></li>
-                                </ul>
-                            </div> {/* End row */}
-                        </div> {/* End container */}
-                    </div> {/* End wsmegamenu */}
-                </li> {/* END MEGAMENU */}
-                {/* SIMPLE NAVIGATION LINK */}
-                <li className="nl-simple" aria-haspopup="true"><Link href="/pricing-1" className="h-link">Pricing</Link></li>
-                {/* SIMPLE NAVIGATION LINK */}
-                <li className="nl-simple" aria-haspopup="true"><Link href="#faqs-3" className="h-link">FAQs</Link>
-                </li>
-                {/* SIGN IN LINK */}
-                <li className="nl-simple reg-fst-link mobile-last-link" aria-haspopup="true">
-                    <Link href="/login-2" className="h-link">Sign in</Link>
-                </li>
-                {/* SIGN UP BUTTON */}
-                <li className="nl-simple" aria-haspopup="true">
-                    <Link href="/signup-2" className="btn r-04 btn--theme hover--tra-white last-link">Sign
-                        up</Link>
-                </li>
-            </ul>
-        </>
-    )
+  return (
+    <>
+      <ul className="wsmenu-list nav-theme">
+        {/* MEGAMENU */}
+        <li aria-haspopup="true" className="mg_link">
+          <Link href="#" className="h-link">
+            Product <span className="wsarrow" />
+          </Link>
+          <div className="wsmegamenu w-75 clearfix">
+            <div className="container">
+              <div className="row">
+                {/* MEGAMENU LINKS */}
+                <ul className="col-md-12 col-lg-3 link-list">
+                  <li className="fst-li">
+                    <Link href="/about">About Us</Link>
+                  </li>
+                  <li>
+                    <Link href="/team">Our Team</Link>
+                  </li>
+                  <li>
+                    <Link href="/careers">
+                      Careers <span className="sm-info">4</span>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/career-role">Career Details</Link>
+                  </li>
+                  <li>
+                    <Link href="/contacts">Contact Us</Link>
+                  </li>
+                </ul>
+                {/* MEGAMENU LINKS */}
+                <ul className="col-md-12 col-lg-3 link-list">
+                  <li>
+                    <Link href="/features">Core Features</Link>
+                  </li>
+                  <li className="fst-li">
+                    <Link href="/projects">Our Projects</Link>
+                  </li>
+                  <li>
+                    <Link href="/project-details">Project Details</Link>
+                  </li>
+                  <li>
+                    <Link href="/reviews">Testimonials</Link>
+                  </li>
+                  <li>
+                    <Link href="/download">Download Page</Link>
+                  </li>
+                </ul>
+                {/* MEGAMENU LINKS */}
+                <ul className="col-md-12 col-lg-3 link-list">
+                  <li className="fst-li">
+                    <Link href="/pricing-1">Pricing Page #1</Link>
+                  </li>
+                  <li>
+                    <Link href="/pricing-2">Pricing Page #2</Link>
+                  </li>
+                  <li>
+                    <Link href="/faqs">FAQs Page</Link>
+                  </li>
+                  <li>
+                    <Link href="/help-center">Help Center</Link>
+                  </li>
+                  <li>
+                    <Link href="/404">404 Page</Link>
+                  </li>
+                </ul>
+                {/* MEGAMENU LINKS */}
+                <ul className="col-md-12 col-lg-3 link-list">
+                  <li className="fst-li">
+                    <Link href="/blog-listing">Blog Listing</Link>
+                  </li>
+                  <li>
+                    <Link href="/single-post">Single Blog Post</Link>
+                  </li>
+                  <li>
+                    <Link href="/login-2">Login Page</Link>
+                  </li>
+                  <li>
+                    <Link href="/signup-2">Signup Page</Link>
+                  </li>
+                  <li>
+                    <Link href="/reset-password">Reset Password</Link>
+                  </li>
+                </ul>
+              </div>{" "}
+              {/* End row */}
+            </div>{" "}
+            {/* End container */}
+          </div>{" "}
+          {/* End wsmegamenu */}
+        </li>{" "}
+        {/* END MEGAMENU */}
+        {/* SIMPLE NAVIGATION LINK */}
+        <li className="nl-simple" aria-haspopup="true">
+          <Link href="/pricing-1" className="h-link">
+            Explore
+          </Link>
+        </li>
+        {/* MEGAMENU - Resourses */}
+        <li aria-haspopup="true" className="mg_link">
+          <Link href="#" className="h-link">
+            Resourses <span className="wsarrow" />
+          </Link>
+          <div className="wsmegamenu w-40 clearfix">
+            <div className="container">
+              <div className="row">
+                {/* MEGAMENU LINKS */}
+                <ul className="col-md-12 col-lg-6 link-list">
+                  <li className="fst-li">
+                    <Link href="/about">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "start",
+                          gap: "0.625rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            height: "2.5rem",
+                            width: "2.5rem",
+                            color: "#b576e4",
+                          }}
+                        >
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 24 24"
+                            style={{ enableBackground: "new 0 0 24 24" }}
+                            xmlSpace="preserve"
+                            fill="#b576e4"
+                          >
+                            <g>
+                              <path
+                                d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"
+                              ></path>
+                              <path
+                                d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"
+                              ></path>
+                              <path
+                                d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <div>
+                          <p
+                            style={{
+                              fontSize: "1.0rem",
+                              fontWeight: "bold",
+                              letterSpacing: "-.01em",
+                              color: "#333",
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Marketplace
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "0.775rem",
+                              color: "#888",
+                            }}
+                          >
+                            Professional themes, custom integrations and
+                            qualified experts
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/team">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "start",
+                          gap: "0.625rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            height: "2.5rem",
+                            width: "2.5rem",
+                            color: "#b576e4",
+                          }}
+                        >
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 24 24"
+                            style={{ enableBackground: "new 0 0 24 24" }}
+                            xmlSpace="preserve"
+                            fill="#b576e4"
+                          >
+                            <g>
+                              <path
+                                d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"
+                              ></path>
+                              <path
+                                d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"
+                              ></path>
+                              <path
+                                d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <div>
+                          <p
+                            style={{
+                              fontSize: "1.0rem",
+                              fontWeight: "bold",
+                              letterSpacing: "-.01em",
+                              color: "#333",
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Marketplace
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "0.775rem",
+                              color: "#888",
+                            }}
+                          >
+                            Professional themes, custom integrations and
+                            qualified experts
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/careers">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "start",
+                          gap: "0.625rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            height: "2.5rem",
+                            width: "2.5rem",
+                            color: "#b576e4",
+                          }}
+                        >
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 24 24"
+                            style={{ enableBackground: "new 0 0 24 24" }}
+                            xmlSpace="preserve"
+                            fill="#b576e4"
+                          >
+                            <g>
+                              <path
+                                d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"
+                              ></path>
+                              <path
+                                d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"
+                              ></path>
+                              <path
+                                d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <div>
+                          <p
+                            style={{
+                              fontSize: "1.0rem",
+                              fontWeight: "bold",
+                              letterSpacing: "-.01em",
+                              color: "#333",
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Marketplace
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "0.775rem",
+                              color: "#888",
+                            }}
+                          >
+                            Professional themes, custom integrations and
+                            qualified experts
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/career-role">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "start",
+                          gap: "0.625rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            height: "2.5rem",
+                            width: "2.5rem",
+                            color: "#b576e4",
+                          }}
+                        >
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 24 24"
+                            style={{ enableBackground: "new 0 0 24 24" }}
+                            xmlSpace="preserve"
+                            fill="#b576e4"
+                          >
+                            <g>
+                              <path
+                                d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"
+                              ></path>
+                              <path
+                                d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"
+                              ></path>
+                              <path
+                                d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <div>
+                          <p
+                            style={{
+                              fontSize: "1.0rem",
+                              fontWeight: "bold",
+                              letterSpacing: "-.01em",
+                              color: "#333",
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Marketplace
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "0.775rem",
+                              color: "#888",
+                            }}
+                          >
+                            Professional themes, custom integrations and
+                            qualified experts
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+                {/* MEGAMENU LINKS */}
+                <ul className="col-md-12 col-lg-6 link-list">
+                  <li>
+                    <Link href="/features">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "start",
+                          gap: "0.625rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            height: "2.5rem",
+                            width: "2.5rem",
+                            color: "#b576e4",
+                          }}
+                        >
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 24 24"
+                            style={{ enableBackground: "new 0 0 24 24" }}
+                            xmlSpace="preserve"
+                            fill="#b576e4"
+                          >
+                            <g>
+                              <path
+                                d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"
+                              ></path>
+                              <path
+                                d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"
+                              ></path>
+                              <path
+                                d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <div>
+                          <p
+                            style={{
+                              fontSize: "1.0rem",
+                              fontWeight: "bold",
+                              letterSpacing: "-.01em",
+                              color: "#333",
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Marketplace
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "0.775rem",
+                              color: "#888",
+                            }}
+                          >
+                            Professional themes, custom integrations and
+                            qualified experts
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li className="fst-li">
+                    <Link href="/projects">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "start",
+                          gap: "0.625rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            height: "2.5rem",
+                            width: "2.5rem",
+                            color: "#b576e4",
+                          }}
+                        >
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 24 24"
+                            style={{ enableBackground: "new 0 0 24 24" }}
+                            xmlSpace="preserve"
+                            fill="#b576e4"
+                          >
+                            <g>
+                              <path
+                                d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"
+                              ></path>
+                              <path
+                                d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"
+                              ></path>
+                              <path
+                                d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <div>
+                          <p
+                            style={{
+                              fontSize: "1.0rem",
+                              fontWeight: "bold",
+                              letterSpacing: "-.01em",
+                              color: "#333",
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Marketplace
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "0.775rem",
+                              color: "#888",
+                            }}
+                          >
+                            Professional themes, custom integrations and
+                            qualified experts
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/project-details">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "start",
+                          gap: "0.625rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            height: "2.5rem",
+                            width: "2.5rem",
+                            color: "#b576e4",
+                          }}
+                        >
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 24 24"
+                            style={{ enableBackground: "new 0 0 24 24" }}
+                            xmlSpace="preserve"
+                            fill="#b576e4"
+                          >
+                            <g>
+                              <path
+                                d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"
+                              ></path>
+                              <path
+                                d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"
+                              ></path>
+                              <path
+                                d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <div>
+                          <p
+                            style={{
+                              fontSize: "1.0rem",
+                              fontWeight: "bold",
+                              letterSpacing: "-.01em",
+                              color: "#333",
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Marketplace
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "0.775rem",
+                              color: "#888",
+                            }}
+                          >
+                            Professional themes, custom integrations and
+                            qualified experts
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/reviews">
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "start",
+                          gap: "0.625rem",
+                        }}
+                      >
+                        <span
+                          style={{
+                            height: "2.5rem",
+                            width: "2.5rem",
+                            color: "#b576e4",
+                          }}
+                        >
+                          <svg
+                            version="1.1"
+                            id="Layer_1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            x="0px"
+                            y="0px"
+                            viewBox="0 0 24 24"
+                            style={{ enableBackground: "new 0 0 24 24" }}
+                            xmlSpace="preserve"
+                            fill="#b576e4"
+                          >
+                            <g>
+                              <path
+                                d="M11.993,14.251c-0.365,0-0.729-0.088-1.052-0.255L0.732,8.714C0.478,8.584,0.275,8.38,0.144,8.125
+		c-0.344-0.67-0.079-1.494,0.59-1.838l10.206-5.28c0.324-0.167,0.688-0.255,1.052-0.255s0.729,0.088,1.052,0.255l10.21,5.281
+		c0.252,0.131,0.454,0.333,0.585,0.585c0.346,0.67,0.083,1.495-0.585,1.842l-10.209,5.281
+		C12.723,14.162,12.359,14.251,11.993,14.251z M11.63,12.663c0.112,0.058,0.237,0.088,0.364,0.088c0.126,0,0.252-0.031,0.363-0.088
+		l9.979-5.162l-9.979-5.162c-0.111-0.058-0.237-0.088-0.363-0.088s-0.252,0.03-0.364,0.088L1.652,7.501L11.63,12.663z"
+                              ></path>
+                              <path
+                                d="M11.996,18.751c-0.366,0-0.73-0.088-1.055-0.256L0.433,13.426c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.675-0.424c0.114,0,0.224,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.064,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.088l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,18.664,12.359,18.751,11.996,18.751z"
+                              ></path>
+                              <path
+                                d="M11.996,23.251c-0.366,0-0.73-0.088-1.055-0.256L0.433,17.926c-0.18-0.087-0.316-0.239-0.382-0.428
+		c-0.066-0.189-0.054-0.393,0.033-0.573c0.124-0.258,0.389-0.424,0.676-0.424c0.114,0,0.223,0.025,0.326,0.075l10.527,5.078
+		c0.126,0.065,0.256,0.096,0.385,0.096c0.125,0,0.25-0.03,0.361-0.087l10.576-5.087c0.103-0.049,0.212-0.074,0.325-0.074
+		c0.287,0,0.552,0.167,0.676,0.425c0.179,0.372,0.022,0.821-0.351,1l-10.557,5.078C12.718,23.164,12.359,23.251,11.996,23.251z"
+                              ></path>
+                            </g>
+                          </svg>
+                        </span>
+                        <div>
+                          <p
+                            style={{
+                              fontSize: "1.0rem",
+                              fontWeight: "bold",
+                              letterSpacing: "-.01em",
+                              color: "#333",
+                              marginBottom: "6px",
+                            }}
+                          >
+                            Marketplace
+                          </p>
+                          <p
+                            style={{
+                              fontSize: "0.775rem",
+                              color: "#888",
+                            }}
+                          >
+                            Professional themes, custom integrations and
+                            qualified experts
+                          </p>
+                        </div>
+                      </div>
+                    </Link>
+                  </li>
+                </ul>
+              </div>{" "}
+              {/* End row */}
+            </div>{" "}
+            {/* End container */}
+          </div>{" "}
+          {/* End wsmegamenu */}
+        </li>{" "}
+        {/* END MEGAMENU */}
+        {/* SIMPLE NAVIGATION LINK */}
+        <li className="nl-simple" aria-haspopup="true">
+          <Link href="/pricing-1" className="h-link">
+            Pricing
+          </Link>
+        </li>
+        {/* SIMPLE NAVIGATION LINK */}
+        <li className="nl-simple" aria-haspopup="true">
+          <Link href="#faqs-3" className="h-link">
+            FAQs
+          </Link>
+        </li>
+        {/* SIGN IN LINK */}
+        <li
+          className="nl-simple reg-fst-link mobile-last-link"
+          aria-haspopup="true"
+        >
+          <Link href="/login-2" className="h-link">
+            Sign in
+          </Link>
+        </li>
+        {/* SIGN UP BUTTON */}
+        <li className="nl-simple" aria-haspopup="true">
+          <Link
+            href="/signup-2"
+            className="btn r-04 btn--theme hover--tra-white last-link"
+          >
+            Sign up
+          </Link>
+        </li>
+      </ul>
+    </>
+  );
 }

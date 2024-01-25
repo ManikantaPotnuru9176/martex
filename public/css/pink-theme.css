@@ -3892,6 +3892,22 @@ span.sm-info {
   -o-border-radius: 100%;
 }
 
+span.md-info {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 18px;
+  color: #fff;
+  font-size: 0.6rem;
+  line-height: 19px;
+  font-weight: 600;
+  margin-left: 5px;
+  -webkit-border-radius: 16%;
+  -moz-border-radius: 16%;
+  -o-border-radius: 16%;
+}
+
 .nav-blue-500 .sm-info {
   background-color: #185abd;
 }
@@ -4145,6 +4161,12 @@ span.sm-info {
 
 .wsmenu > .wsmenu-list > li > .wsmegamenu.w-75 {
   width: 76% !important;
+  left: 23%;
+  padding: 20px 10px;
+}
+
+.wsmenu > .wsmenu-list > li > .wsmegamenu.w-40 {
+  width: 60% !important;
   left: 23%;
   padding: 20px 10px;
 }
@@ -13485,6 +13507,10 @@ body.theme--dark {
 
 .nav-theme .sm-info {
   background-color: #f74780;
+}
+
+.nav-theme .md-info {
+  background-color: #b576e4;
 }
 
 .wsmenu > .wsmenu-list.nav-theme > li > ul.sub-menu > li > a:hover,
